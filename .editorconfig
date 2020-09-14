@@ -1,0 +1,31 @@
+##############################################################################
+#
+#   EditorConfig for WallpaperChanger project
+#
+##############################################################################
+
+# tab/8 indentation
+[{makefile,Makefile,GNUmakefile,sources,dirs,LICENSE,COPYING,INSTALL,*.mak,*.mk,*.ini,*.txt}]
+indent_style = tab
+indent_size = 8
+tab_width = 8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# space/4 indentation
+[*.{c,cc,cpp,cxx,h,hpp,hxx,inl,cs,pl,pm,py,js,jsx,ts,tsx,json,rc,mc}]
+indent_style = space
+indent_size = 4
+tab_width = 4
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# space/2 indentation
+[*.{htm,html,css,xml,xaml,wxs,man,manifest,props,targets,*proj}]
+indent_style = space
+indent_size = 2
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{0FABE956-49D6-46A4-BE64-4EF490CF6FFC}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>obj\$(Platform)-$(Configuration)\</IntDir>
+    <EnableClangTidyCodeAnalysis>true</EnableClangTidyCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>bin\$(Platform)-$(Configuration)\</OutDir>
+    <IntDir>obj\$(Platform)-$(Configuration)\</IntDir>
+    <EnableClangTidyCodeAnalysis>true</EnableClangTidyCodeAnalysis>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\WTL;..\ThirdParty;$(ProjectDir)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <Optimization>Disabled</Optimization>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>_WINDOWS;STRICT;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\WTL;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..\WTL;..\ThirdParty;$(ProjectDir)</AdditionalIncludeDirectories>
+      <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>precomp.h</PrecompiledHeaderFile>
+      <PreprocessorDefinitions>_WINDOWS;STRICT;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>..\WTL;$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AboutDlg.cpp" />
+    <ClCompile Include="AppBase.cpp" />
+    <ClCompile Include="DebugPrint.cpp" />
+    <ClCompile Include="MainFrame.cpp" />
+    <ClCompile Include="MF.Commands.cpp" />
+    <ClCompile Include="MF.ListView.cpp" />
+    <ClCompile Include="MF.PlayList.cpp" />
+    <ClCompile Include="MF.Timer.cpp" />
+    <ClCompile Include="MF.Toolbar.cpp" />
+    <ClCompile Include="MF.TrayIcon.cpp" />
+    <ClCompile Include="Options.cpp" />
+    <ClCompile Include="OptionsDlg.cpp" />
+    <ClCompile Include="PlayList.cpp" />
+    <ClCompile Include="PlayListManagerDlg.cpp" />
+    <ClCompile Include="Resize.cpp" />
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="WallpaperChangerApp.cpp" />
+    <ClCompile Include="WallpaperManager.cpp" />
+    <ClCompile Include="precomp.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\ColorButton.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AboutDlg.h" />
+    <ClInclude Include="AppBase.h" />
+    <ClInclude Include="CountdownTimer.h" />
+    <ClInclude Include="DesktopWallpaper.h" />
+    <ClInclude Include="HotKey.h" />
+    <ClInclude Include="ImageListCache.h" />
+    <ClInclude Include="MainFrame.h" />
+    <ClInclude Include="Options.h" />
+    <ClInclude Include="OptionsDlg.h" />
+    <ClInclude Include="PlayList.h" />
+    <ClInclude Include="PlayListManagerDlg.h" />
+    <ClInclude Include="PlayListNameDlg.h" />
+    <ClInclude Include="precomp.h" />
+    <ClInclude Include="Registry.h" />
+    <ClInclude Include="Resize.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="TrayIcon.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="VersionInfo.h" />
+    <ClInclude Include="WallpaperChangerApp.h" />
+    <ClInclude Include="WallpaperManager.h" />
+    <ClInclude Include="..\ThirdParty\ColorButton.h" />
+    <ClInclude Include="..\ThirdParty\ToolBarHelper.h" />
+    <ClInclude Include="..\WTL\atlapp.h" />
+    <ClInclude Include="..\WTL\atlcrack.h" />
+    <ClInclude Include="..\WTL\atlctrls.h" />
+    <ClInclude Include="..\WTL\atlctrlw.h" />
+    <ClInclude Include="..\WTL\atlctrlx.h" />
+    <ClInclude Include="..\WTL\atlddx.h" />
+    <ClInclude Include="..\WTL\atldlgs.h" />
+    <ClInclude Include="..\WTL\atldwm.h" />
+    <ClInclude Include="..\WTL\atlfind.h" />
+    <ClInclude Include="..\WTL\atlframe.h" />
+    <ClInclude Include="..\WTL\atlgdi.h" />
+    <ClInclude Include="..\WTL\atlmisc.h" />
+    <ClInclude Include="..\WTL\atlprint.h" />
+    <ClInclude Include="..\WTL\atlres.h" />
+    <ClInclude Include="..\WTL\atlribbon.h" />
+    <ClInclude Include="..\WTL\atlscrl.h" />
+    <ClInclude Include="..\WTL\atlsplit.h" />
+    <ClInclude Include="..\WTL\atltheme.h" />
+    <ClInclude Include="..\WTL\atluser.h" />
+    <ClInclude Include="..\WTL\atlwinx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WallpaperChanger.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\App.About.ico" />
+    <Image Include="res\App.Options.ico" />
+    <Image Include="res\Playlist.Add.ico" />
+    <Image Include="res\Playlist.Current.ico" />
+    <Image Include="res\Playlist.Remove.ico" />
+    <Image Include="res\Playlist.Shuffle.ico" />
+    <Image Include="res\Wallpaper.Next.Alt.ico" />
+    <Image Include="res\Wallpaper.Next.ico" />
+    <Image Include="res\Wallpaper.Pause.ico" />
+    <Image Include="res\Wallpaper.Prev.Alt.ico" />
+    <Image Include="res\Wallpaper.Prev.ico" />
+    <Image Include="res\Wallpaper.Random.ico" />
+    <Image Include="res\Wallpaper.Safe.Alt.ico" />
+    <Image Include="res\Wallpaper.Safe.ico" />
+    <Image Include="res\WallpaperChanger.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="WallpaperChanger.man">
+      <FileType>Manifest</FileType>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\LICENSE.txt">
+      <DeploymentContent>true</DeploymentContent>
+    </Text>
+    <Text Include="..\WTL\git-info.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\README.md">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(SolutionDir)Tools\Markdown\MD-to-HTML.bat" "%(Identity)" "$(OutDir)%(Filename).html"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Converting README from Markdown to HTML</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(OutDir)%(Filename).html</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(SolutionDir)Tools\Markdown\MD-to-HTML.bat" "%(Identity)" "$(OutDir)%(Filename).html"</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Converting README from Markdown to HTML</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutDir)%(Filename).html</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)Tools\Markdown\MD-to-HTML.bat;$(SolutionDir)Tools\Markdown\header.html;$(SolutionDir)Tools\Markdown\footer.html;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)Tools\Markdown\MD-to-HTML.bat;$(SolutionDir)Tools\Markdown\header.html;$(SolutionDir)Tools\Markdown\footer.html;%(AdditionalInputs)</AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Tools\Markdown\footer.html" />
+    <None Include="..\Tools\Markdown\header.html" />
+    <None Include="..\Tools\Markdown\MD-to-HTML.bat" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

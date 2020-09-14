@@ -1,0 +1,144 @@
+==============================================================================
+Wallpaper Changer application
+==============================================================================
+
+SPDX-License-Identifier: BSD-3-Clause
+
+Copyright 2020 by State University of Catatonia and other Contributors
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions
+are met:
+
+(1) Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+
+(2) Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+
+(3) Neither the name of the University nor the names of other Contributors
+    may be used to endorse or promote products derived from this software
+    without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
+ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+==============================================================================
+Third-party code/assets used by the application...
+==============================================================================
+
+------------------------------------------------------------------------------
+
+Windows Template Library - WTL version 10.0
+Copyright (C) Microsoft Corporation, WTL Team. All rights reserved.
+
+The use and distribution terms for this software are covered by the
+Microsoft Public License (http://opensource.org/licenses/MS-PL).
+
+------------------------------------------------------------------------------
+
+Windows Installer XML (WIX)
+Copyright (c) .NET Foundation and contributors. All rights reserved.
+
+Licensed under the Microsoft Reciprocal License
+(http://opensource.org/licenses/MS-RL).
+
+------------------------------------------------------------------------------
+
+Color button and popup
+
+Copyright (c) 2000-2002 - Descartes Systems Sciences, Inc.
+
+Based on work by Chris Maunder, Alexander Bischofberger and James White.
+
+http://www.codetools.com/miscctrl/colorbutton.asp
+http://www.codetools.com/miscctrl/colour_picker.asp
+
+Copyright (c) 2000-2002 - Descartes Systems Sciences, Inc.
+
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without 
+modification, are permitted provided that the following conditions are 
+met:
+
+1. Redistributions of source code must retain the above copyright notice, 
+   this list of conditions and the following disclaimer. 
+2. Neither the name of Descartes Systems Sciences, Inc nor the names of 
+   its contributors may be used to endorse or promote products derived 
+   from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
+"AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT 
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR 
+A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT 
+OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, 
+SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED 
+TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+--- ORIGINAL COPYRIGHT STATEMENT ---
+
+Written by Chris Maunder (chrismaunder@codeguru.com)
+Extended by Alexander Bischofberger (bischofb@informatik.tu-muenchen.de)
+Copyright (c) 1998.
+
+ColourPopup is a helper class for the colour picker control
+CColourPicker. Check out the header file or the accompanying 
+HTML doc file for details.
+
+This code may be used in compiled form in any way you desire. This
+file may be redistributed unmodified by any means PROVIDING it is 
+not sold for profit without the authors written consent, and 
+providing that this notice and the authors name is included. 
+
+This file is provided "as is" with no expressed or implied warranty.
+The author accepts no liability if it causes any damage to you or your
+computer whatsoever. It's free, so don't hassle me about it.
+
+Expect bugs.
+
+Please use and enjoy. Please let me know of any bugs/mods/improvements 
+that you have found/implemented and I will fix/incorporate them into this
+file. 
+
+------------------------------------------------------------------------------
+
+ToolBarHelper.h
+
+https://www.codeproject.com/Articles/16737/WTL-Toolbar-Helper
+
+Copyright 2006 Rob Caldecott
+
+CPOL License... https://www.codeproject.com/info/cpol10.aspx
+
+------------------------------------------------------------------------------
+
+Application icon is derrived from SVG images from flaticon.com.
+"Icon made by Freepik from www.flaticon.com"
+
+------------------------------------------------------------------------------
+
+Free "Farm-Fresh Web Icons" by FatCow Web Hosting.
+
+https://www.fatcow.com/free-icons
+
+Copyright 2009-2014 FatCow Web Hosting. All rights reserved.
+
+These icons are licensed under a Creative Commons Attribution 3.0 License.
+https://creativecommons.org/licenses/by/3.0/us/
+
+==============================================================================

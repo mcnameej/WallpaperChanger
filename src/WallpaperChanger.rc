@@ -1,0 +1,499 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "atlres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""atlres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Options...",                 ID_APP_OPTIONS
+        MENUITEM "&Close",                      ID_APP_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Playlist"
+    BEGIN
+        MENUITEM "&Add To Playlist...\tIns",    ID_PLAYLIST_ADD
+        MENUITEM "&Remove From Playlist\tDel",  ID_PLAYLIST_REMOVE
+        MENUITEM "S&huffle Playlist",           ID_PLAYLIST_SHUFFLE
+        MENUITEM SEPARATOR
+        MENUITEM "Switch To ""&Safe"" Playlist", ID_WALLPAPER_SAFE
+        MENUITEM "Playlist &Manager...\tCtrl+O", ID_PLAYLIST_MANAGER
+        MENUITEM SEPARATOR
+        MENUITEM "&1. Recent Playlist #1",      ID_PLAYLIST_RECENT_1
+        MENUITEM "&2. Recent Playlist #2",      ID_PLAYLIST_RECENT_2
+        MENUITEM "&3. Recent Playlist #3",      ID_PLAYLIST_RECENT_3
+        MENUITEM "&4. Recent Playlist #4",      ID_PLAYLIST_RECENT_4
+        MENUITEM "&5. Recent Playlist #5",      ID_PLAYLIST_RECENT_5
+    END
+    POPUP "&Wallpaper"
+    BEGIN
+        MENUITEM "Set &Wallpaper\tEnter",       ID_WALLPAPER_CHANGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Next Image",                 ID_WALLPAPER_NEXT
+        MENUITEM "&Previous Image",             ID_WALLPAPER_PREV
+        MENUITEM "&Random Image",               ID_WALLPAPER_RANDOM
+        MENUITEM SEPARATOR
+        MENUITEM "Select &Current Wallpaper\tCtrl+G", ID_PLAYLIST_CURRENT
+        MENUITEM SEPARATOR
+        MENUITEM "Pause &Changes",              ID_WALLPAPER_PAUSE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Wallpaper Changer",    ID_APP_ABOUT
+        MENUITEM "&Legal Notices",              ID_APP_LICENSE
+        MENUITEM "&README File",                ID_APP_README
+        MENUITEM "Check for &Updates",          ID_APP_CHECK_FOR_UPDATES
+    END
+END
+
+IDM_ITEM MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Set As Wallpaper",           ID_WALLPAPER_CHANGE
+        MENUITEM SEPARATOR
+        MENUITEM "&View Image File",            ID_OPEN_IMAGE_FILE
+        MENUITEM "&Edit Image File",            ID_EDIT_IMAGE_FILE
+        MENUITEM "Open Containing &Folder",     ID_OPEN_IMAGE_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Add To Playlist...",         ID_PLAYLIST_ADD
+        MENUITEM "&Remove From Playlist",       ID_PLAYLIST_REMOVE
+        MENUITEM "S&huffle Playlist",           ID_PLAYLIST_SHUFFLE
+        MENUITEM SEPARATOR
+        MENUITEM "Select &Current Wallpaper",   ID_PLAYLIST_CURRENT
+    END
+END
+
+IDM_VIEW MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Add To Playlist...",         ID_PLAYLIST_ADD
+        MENUITEM "&Shuffle Playlist",           ID_PLAYLIST_SHUFFLE
+        MENUITEM "Select &Current Wallpaper",   ID_PLAYLIST_CURRENT
+    END
+END
+
+IDM_TRAY MENU
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "&Open Application",           ID_APP_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "&Next Image",                 ID_WALLPAPER_NEXT
+        MENUITEM "&Previous Image",             ID_WALLPAPER_PREV
+        MENUITEM "&Random Image",               ID_WALLPAPER_RANDOM
+        MENUITEM "Switch To ""&Safe"" Playlist", ID_WALLPAPER_SAFE
+        MENUITEM SEPARATOR
+        MENUITEM "Pause &Changes",              ID_WALLPAPER_PAUSE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\WallpaperChanger.ico"
+
+ID_APP_ABOUT            ICON                    "res\\App.About.ico"
+
+ID_APP_OPTIONS          ICON                    "res\\App.Options.ico"
+
+ID_WALLPAPER_NEXT       ICON                    "res\\Wallpaper.Next.Alt.ico"
+
+ID_WALLPAPER_PREV       ICON                    "res\\Wallpaper.Prev.Alt.ico"
+
+ID_WALLPAPER_RANDOM     ICON                    "res\\Wallpaper.Random.ico"
+
+ID_WALLPAPER_SAFE       ICON                    "res\\Wallpaper.Safe.Alt.ico"
+
+ID_WALLPAPER_PAUSE      ICON                    "res\\Wallpaper.Pause.ico"
+
+ID_PLAYLIST_ADD         ICON                    "res\\Playlist.Add.ico"
+
+ID_PLAYLIST_REMOVE      ICON                    "res\\Playlist.Remove.ico"
+
+ID_PLAYLIST_SHUFFLE     ICON                    "res\\Playlist.Shuffle.ico"
+
+ID_PLAYLIST_CURRENT     ICON                    "res\\Playlist.Current.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 300, 130
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Wallpaper Changer"
+FONT 9, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,140,11,18,16
+    CTEXT           "Name",IDC_NAME,7,40,286,12,SS_NOPREFIX
+    CTEXT           "Version",IDC_VERSION,7,54,286,10
+    CTEXT           "Copyright",IDC_COPYRIGHT,7,67,286,10
+    CTEXT           "Check for updates",IDC_CHECK_FOR_UPDATES,110,84,80,10,WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,125,105,50,14,WS_GROUP
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 245, 220
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 9, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "&Change wallpaper every:",IDC_STATIC,7,9,95,8
+    COMBOBOX        IDC_INTERVAL_COMBO,107,7,131,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_INTERVAL_HOURS,107,24,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_HOURS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,131,23,10,14
+    LTEXT           "hours",IDC_STATIC,145,26,20,8
+    EDITTEXT        IDC_INTERVAL_MINUTES,173,24,34,12,ES_RIGHT | ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_MINUTES_SPIN,"msctls_updown32",UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,197,23,10,14
+    LTEXT           "minutes",IDC_STATIC,211,26,27,8
+    LTEXT           "Image &resize method:",IDC_STATIC,7,44,95,8
+    COMBOBOX        IDC_RESIZE_MODE_COMBO,107,42,131,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Background color:",IDC_STATIC,7,63,95,8
+    PUSHBUTTON      "(color)",IDC_BG_COLOR_COMBO,107,60,131,13
+    LTEXT           """&Safe For Work"" playlist:",IDC_STATIC,7,82,95,8
+    COMBOBOX        IDC_SAFE_PLAYLIST_COMBO,107,79,131,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Automatic startup:",IDC_STATIC,7,101,95,8
+    COMBOBOX        IDC_AUTOSTART_COMBO,107,98,131,70,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Next Image hotkey:",IDC_STATIC,7,119,95,8
+    CONTROL         "",IDC_NEXT_HOTKEY_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,118,10,10
+    COMBOBOX        IDC_NEXT_HOTKEY_MODIFIER,121,117,70,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_NEXT_HOTKEY_VK,198,117,40,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Previous Image hotkey:",IDC_STATIC,7,138,95,8
+    CONTROL         "",IDC_PREV_HOTKEY_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,137,10,10
+    COMBOBOX        IDC_PREV_HOTKEY_MODIFIER,120,136,71,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_PREV_HOTKEY_VK,198,136,40,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Rando&m Image hotkey:",IDC_STATIC,7,157,95,8
+    CONTROL         "",IDC_RANDOM_HOTKEY_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,156,10,10
+    COMBOBOX        IDC_RANDOM_HOTKEY_MODIFIER,120,155,71,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_RANDOM_HOTKEY_VK,198,155,40,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Saf&e Playlist hotkey:",IDC_STATIC,7,176,95,8
+    CONTROL         "",IDC_SAFE_HOTKEY_ENABLED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,107,175,10,10
+    COMBOBOX        IDC_SAFE_HOTKEY_MODIFIER,120,174,71,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_SAFE_HOTKEY_VK,198,174,40,50,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "OK",IDOK,64,199,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,130,199,50,14
+END
+
+IDD_PLAYLIST_MANAGER DIALOGEX 0, 0, 191, 114
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Playlist Manager"
+FONT 9, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LISTBOX         IDC_PLAYLISTS,7,7,120,100,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Open",IDC_OPEN,134,7,50,14
+    PUSHBUTTON      "&New...",IDC_NEW,134,25,50,14
+    PUSHBUTTON      "&Rename...",IDC_RENAME,134,43,50,14
+    PUSHBUTTON      "&Delete",IDC_DELETE,134,61,50,14
+    PUSHBUTTON      "Close",IDCLOSE,134,93,50,14
+END
+
+IDD_PLAYLIST_NAME DIALOGEX 0, 0, 184, 64
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "(Title)"
+FONT 9, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "(Heading)",IDC_NAME_HEADING,7,7,170,8
+    EDITTEXT        IDC_NAME_EDIT,7,22,170,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,7,43,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,127,43,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 293
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+    END
+
+    IDD_PLAYLIST_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 107
+    END
+
+    IDD_PLAYLIST_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 177
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 57
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_PLAYLIST_ADD,        VIRTKEY, NOINVERT
+    VK_DELETE,      ID_PLAYLIST_REMOVE,     VIRTKEY, NOINVERT
+    "O",            ID_PLAYLIST_MANAGER,    VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_PLAYLIST_CURRENT,    VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_PLAYLIST_RECENT_1,   VIRTKEY, ALT, NOINVERT
+    "2",            ID_PLAYLIST_RECENT_2,   VIRTKEY, ALT, NOINVERT
+    "3",            ID_PLAYLIST_RECENT_3,   VIRTKEY, ALT, NOINVERT
+    "4",            ID_PLAYLIST_RECENT_4,   VIRTKEY, ALT, NOINVERT
+    "5",            ID_PLAYLIST_RECENT_5,   VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Wallpaper Changer"
+            VALUE "FileVersion", "1.0.0.0"
+            VALUE "ProductName", "Wallpaper Changer"
+            VALUE "ProductVersion", "1.0.0.0"
+            VALUE "CompanyName", "Catatonic State"
+            VALUE "LegalCopyright", "Copyright 2020 by State University of Catatonia and other Contributors"
+            VALUE "OriginalFilename", "WallpaperChanger.exe"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PLAYLIST_MANAGER AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_PLAYLIST_NAME AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Wallpaper Changer"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_UPDATE_URL          "https://example.com/CheckUpdate/WallpaperChanger?CurrentVersion=%d.%d.%d.%d"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_OPTIONS          "Configure application options\nOptions"
+    ID_APP_OPEN             "Open the application window\nOpen"
+    ID_APP_CLOSE            "Close the application window\nClose"
+    ID_APP_LICENSE          "Display license information"
+    ID_APP_README           "Display the README file"
+    ID_APP_CHECK_FOR_UPDATES "Check for application updates"
+    ID_OPEN_IMAGE_FILE      "Open the selected image in external viewer"
+    ID_EDIT_IMAGE_FILE      "Open the selected image in external editor"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPEN_IMAGE_FOLDER    "Open folder containing the selected image"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display application version and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_PLAYLIST_MANAGER     "Open the playlist manager\nPlaylist manager"
+    ID_PLAYLIST_ADD         "Add image(s) to playlist\nAdd image(s) to playlist"
+    ID_PLAYLIST_REMOVE      "Remove selected images(s) from playlist\nRemove image(s) from playlist"
+    ID_PLAYLIST_SHUFFLE     "Shuffle the playlist\nShuffle the playlist"
+END
+
+STRINGTABLE
+BEGIN
+    ID_PLAYLIST_CURRENT     "Select the currently displayed wallpaper image\nSelect the currently displayed wallpaper image"
+    ID_PLAYLIST_RECENT_1    "Open recently used playlist"
+    ID_PLAYLIST_RECENT_2    "Open recently used playlist"
+    ID_PLAYLIST_RECENT_3    "Open recently used playlist"
+    ID_PLAYLIST_RECENT_4    "Open recently used playlist"
+    ID_PLAYLIST_RECENT_5    "Open recently used playlist"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WALLPAPER_CHANGE     "Change wallpaper to the currently selected image\nChange"
+    ID_WALLPAPER_NEXT       "Change wallpaper to the next playlist image\nNext image"
+    ID_WALLPAPER_PREV       "Change wallpaper to the previous playlist image\nPrevious image"
+    ID_WALLPAPER_RANDOM     "Change wallpaper to a random playlist image\nRandom image"
+    ID_WALLPAPER_SAFE       "Switch to the ""Safe For Work"" playlist\nSwitch to the ""Safe For Work"" playlist"
+    ID_WALLPAPER_PAUSE      "Pause timed wallpaper changes\nPause"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCSIZE          "Change the window size"
+    ATL_IDS_SCMOVE          "Change the window position"
+    ATL_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    ATL_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    ATL_IDS_SCCLOSE         "Close the window"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_SCRESTORE       "Restore the window to normal size"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ATL_IDS_MRU_FILE        "Open this document"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+

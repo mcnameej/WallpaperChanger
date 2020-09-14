@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WallpaperChanger", "src\WallpaperChanger.vcxproj", "{0FABE956-49D6-46A4-BE64-4EF490CF6FFC}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "Installer", "Installer\Installer.wixproj", "{3177ECD2-6129-40AA-ADBA-294DF486DF9F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FABE956-49D6-46A4-BE64-4EF490CF6FFC}.Debug|x64.ActiveCfg = Debug|x64
+		{0FABE956-49D6-46A4-BE64-4EF490CF6FFC}.Debug|x64.Build.0 = Debug|x64
+		{0FABE956-49D6-46A4-BE64-4EF490CF6FFC}.Release|x64.ActiveCfg = Release|x64
+		{0FABE956-49D6-46A4-BE64-4EF490CF6FFC}.Release|x64.Build.0 = Release|x64
+		{3177ECD2-6129-40AA-ADBA-294DF486DF9F}.Debug|x64.ActiveCfg = Debug|x64
+		{3177ECD2-6129-40AA-ADBA-294DF486DF9F}.Release|x64.ActiveCfg = Release|x64
+		{3177ECD2-6129-40AA-ADBA-294DF486DF9F}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6E87C8DE-F28D-4A36-99D1-A2FEE0C0BF7B}
+	EndGlobalSection
+EndGlobal

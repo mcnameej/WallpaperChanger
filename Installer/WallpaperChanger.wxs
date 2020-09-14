@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
+
+  <!--
+  //////////////////////////////////////////////////////////////////////////////
+  //
+  //  Copyright 2020 by State University of Catatonia and other Contributors
+  //
+  //  This file is provided under a "BSD 3-Clause" open source license.
+  //  The full text of the license is provided in the "LICENSE.txt" file.
+  //
+  //  SPDX-License-Identifier: BSD-3-Clause
+  //
+  //////////////////////////////////////////////////////////////////////////////
+  -->
+
+  <Product Id="*"
+           Name="Wallpaper Changer"
+           Manufacturer="State University of Catatonia"
+           Version="!(bind.FileVersion.AppExe)"
+           Language="1033"
+           UpgradeCode="A1E8133B-BB16-41E3-B7DC-60EBB6BCFE58">
+
+    <Package InstallerVersion="500" Compressed="yes" InstallScope="perUser" />
+
+    <MediaTemplate CompressionLevel="high" EmbedCab="yes" />
+
+    <!--
+      Install per-user.
+    -->
+
+    <Property Id="ALLUSERS" Value="2" />
+    <Property Id="MSIINSTALLPERUSER" Value="1" />
+
+    <!--
+      Treat installations of same or newer version as a "major upgrade".
+      With a small MSI, there's no point in dealing with minor upgrades
+      and patches.
+
+      Don't allow installation of an older version (downgrade).
+    -->
+
+    <MajorUpgrade AllowSameVersionUpgrades="yes"
+                  DowngradeErrorMessage="A newer version of [ProductName] is already installed. You must manually uninstall it before downgrading to an older version." />
+
+    <!--
+      Don't create advertised shortcuts, despite Shortcut/@Advertise="yes".
+      IMHO, advertised shortcuts are a misfeature. Just Say No!
+    -->
+
+    <Property Id="DISABLEADVTSHORTCUTS" Value="1" />
+
+    <!--
+      No consumer for this property.
+      Just including it for fun.
+    -->
+
+    <Property Id="LicenseIdentifier" Value="BSD-3-Clause" />
+
+    <!--
+      Icon.
+    -->
+
+    <Icon Id="AppIcon" SourceFile="$(var.WallpaperChanger.ProjectDir)res\WallpaperChanger.ico" />
+    <Property Id="ARPPRODUCTICON" Value="AppIcon" />
+
+    <!--
+      Make it easy to distinguish different Windows Installer scenarios.
+
+      IS_INSTALL    Installing product for the first time.
+      IS_UPGRADE    Installing newer version of the product.
+      IS_UNINSTALL  Uninstalling product (NOT during an upgrade).
+      IS_REPAIR     Repairing the installed product.
+
+      IS_CHANGE     Changing features (never used with Wallpaper Changer).
+      IS_PATCH      Installing a patch (never used with Wallpaper Changer).
+      IS_UNPATCH    Uninstalling a patch (never used with Wallpaper Changer).
+
+      These properties are only set during the Execute sequence, because
+      they wouldn't be reliable during the UI sequence (they don't take
+      maintenance mode into account).
+    -->
+
+    <SetProperty Id="IS_INSTALL" After="FindRelatedProducts" Value="1" Sequence="execute">
+      <![CDATA[ NOT Installed AND NOT WIX_UPGRADE_DETECTED ]]>
+    </SetProperty>
+
+    <SetProperty Id="IS_UPGRADE" After="FindRelatedProducts" Value="1" Sequence="execute">
+      <![CDATA[ WIX_UPGRADE_DETECTED ]]>
+    </SetProperty>
+
+    <SetProperty Id="IS_UNINSTALL" After="FindRelatedProducts" Value="1" Sequence="execute">
+      <![CDATA[ REMOVE AND NOT UPGRADINGPRODUCTCODE ]]>
+    </SetProperty>
+
+    <SetProperty Id="IS_UNINSTALL_DURING_UPGRADE" After="FindRelatedProducts" Value="1" Sequence="execute">
+      <![CDATA[ REMOVE AND UPGRADINGPRODUCTCODE ]]>
+    </SetProperty>
+
+    <SetProperty Id="IS_REPAIR" After="FindRelatedProducts" Value="1" Sequence="execute">
+      <![CDATA[ REINSTALL ]]>
+    </SetProperty>
+
+    <SetProperty Id="IS_CHANGE" After="FindRelatedProducts" Value="1" Sequence="execute">
+      <![CDATA[ Installed AND NOT REINSTALL AND WIX_UPGRADE_DETECTED AND NOT REMOVE ]]>
+    </SetProperty>
+
+    <!--
+      Stop running application before Uninstall, Change, Repair, or Upgrade.
+      Prevents MSI from complaining about the EXE file being in use.
+      In fact MSI can use Restart Manager to cleanly exit the application,
+      but it insists on putting up a dialog and getting user consent before
+      doing so.  A reasonable default, but not having a way to override and
+      silently close the application is typical MSI braindamage :-(.
+
+      Start the application after installation (unless doing an Uninstall).
+    -->
+
+    <CustomAction Id="StopApplication"
+                  FileKey="AppExe"
+                  ExeCommand="/exit"
+                  Execute="immediate"
+                  Return="ignore"
+                  Impersonate="yes" />
+
+    <CustomAction Id="StartApplication"
+                  FileKey="AppExe"
+                  ExeCommand="/tray"
+                  Execute="immediate"
+                  Return="asyncNoWait"
+                  Impersonate="yes" />
+
+    <InstallExecuteSequence>
+      <Custom Action="StopApplication" Before="InstallValidate"> NOT IS_INSTALL </Custom>
+      <Custom Action="StartApplication" After="InstallFinalize"> NOT REMOVE </Custom>
+    </InstallExecuteSequence>
+
+    <!--
+      Enable and disable autostart at login.
+
+      Enable during *initial* installation. After that it's up to the user.
+      Do not change (enable or disable) during upgrade or repair.
+      Disable during uninstallation.
+
+      This has to be done with a custom action. AFAICT, there's no way
+      to express the policy described above using the Registry table.
+    -->
+
+    <!-- Create HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Run@WallpaperChanger -->
+    <CustomAction Id="EnableAutoStart"
+                  FileKey="AppExe"
+                  ExeCommand="/autostart=on"
+                  Execute="immediate"
+                  Return="ignore"
+                  Impersonate="yes" />
+
+    <!-- Remove HKCU:SOFTWARE\Microsoft\Windows\CurrentVersion\Run@WallpaperChanger -->
+    <CustomAction Id="DisableAutoStart"
+                  FileKey="AppExe"
+                  ExeCommand="/autostart=off"
+                  Execute="immediate"
+                  Return="ignore"
+                  Impersonate="yes" />
+
+    <InstallExecuteSequence>
+      <Custom Action="EnableAutoStart" After="InstallFinalize"> IS_INSTALL </Custom>
+      <Custom Action="DisableAutoStart" Before="InstallValidate"> IS_UNINSTALL </Custom>
+    </InstallExecuteSequence>
+
+    <!--
+      User Interface.
+    -->
+
+    <UIRef Id="WixUI_Custom" />
+
+    <!--
+      Features.
+    -->
+
+    <Feature Id="CoreFeatures" Title="Core Features" Level="1">
+      <ComponentGroupRef Id="CoreComponents" />
+    </Feature>
+
+  </Product>
+
+  <!--
+    Directory hierarchy.
+
+    IMPORTANT: MSI changes certain directories based on the installation context...
+
+    ProgramFiles64Folder = "%ProgramFiles%" if perMachine.
+                           "%LocalAppData%\Programs" if perUser.
+
+    ProgramMenuFolder = "%ALLUSERSPROFILE%\Microsoft\Windows\Start Menu\Programs" if perMachine.
+                        "%AppData%\Microsoft\Windows\Start Menu\Programs" if perUser.
+  -->
+
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+
+      <Directory Id="ProgramFiles64Folder">
+        <Directory Id="INSTALLDIR" Name="Wallpaper Changer" />
+      </Directory>
+
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ShortcutFolder" Name="Wallpaper Changer" />
+      </Directory>
+
+    </Directory>
+  </Fragment>
+
+  <!--
+    Components.
+
+    (1) Small number of files per component (ideally, one file).
+
+    (2) Assign a permanent GUID (don't let WiX autogenerate).
+
+    (3) Shortcuts must use @Advertise="yes" to avoid validation error,
+        but DISABLEADVTSHORTCUTS=1 makes them "regular" shortcuts.
+  -->
+
+  <Fragment>
+    <ComponentGroup Id="CoreComponents" Directory="INSTALLDIR">
+
+      <Component Id="AppExe" Guid="F7A9FA7B-7606-47DF-A6FD-347E5D225A0E">
+        <File Id="AppExe"
+              Source="$(var.WallpaperChanger.TargetPath)"
+              KeyPath="yes">
+          <Shortcut Id="AppShortcut"
+                    Directory="ShortcutFolder"
+                    Name="Wallpaper Changer"
+                    Advertise="yes" />
+        </File>
+        <RemoveFolder Id="RemoveShortcutFolder"
+                      Directory="ShortcutFolder"
+                      On="uninstall" />
+      </Component>
+
+      <Component Id="LicenseText" Guid="CD92C957-C312-4BFF-B618-0CE5FDA4F6C4">
+        <File Id="LicenseText"
+              Source="$(var.WallpaperChanger.TargetDir)LICENSE.txt"
+              KeyPath="yes">
+          <Shortcut Id="LicenseShortcut"
+                    Directory="ShortcutFolder"
+                    Name="View LICENSE file"
+                    Advertise="yes" />
+        </File>
+      </Component>
+
+      <Component Id="FileNobodyReads" Guid="419BB16B-3F91-433C-AB58-9142679D1F90">
+        <File Id="FileNobodyReads"
+              Source="$(var.WallpaperChanger.TargetDir)README.html"
+              KeyPath="yes">
+          <Shortcut Id="ReadMeShortcut"
+                    Directory="ShortcutFolder"
+                    Name="View README file"
+                    Advertise="yes" />
+        </File>
+      </Component>
+
+    </ComponentGroup>
+  </Fragment>
+
+</Wix>

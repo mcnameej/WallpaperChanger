@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6c240638-2c25-45ab-bd7d-4bc8752977db}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;jpg;jpeg;jpe;manifest</Extensions>
+    </Filter>
+    <Filter Include="WTL">
+      <UniqueIdentifier>{28ec446a-099e-4b3e-a252-94342c0ef017}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Third Party Code">
+      <UniqueIdentifier>{863e9be2-aa10-43cd-811d-e740b4753fa1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main Frame window">
+      <UniqueIdentifier>{bb8d0086-16db-45c6-8b74-5e5a661a20c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dialog boxes">
+      <UniqueIdentifier>{aed9cdb8-43ff-4fee-80ef-eec2eed3d70a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Application">
+      <UniqueIdentifier>{2f8bf8dc-8df1-4ebc-8f4d-0fa9b76a658b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc Header Files">
+      <UniqueIdentifier>{9ae2bb6c-e16f-4936-bbcd-ac66619046c4}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Misc Source Files">
+      <UniqueIdentifier>{6be23b3d-2b3d-4eb2-9b8d-8a30128aa0dd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Toolbar">
+      <UniqueIdentifier>{87a9adf9-f043-41a0-8865-cb66e19223c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Documentation">
+      <UniqueIdentifier>{8d455de4-84fb-496c-90ea-95a7d3613c33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Documentation\Markdown Tools">
+      <UniqueIdentifier>{67aebf31-7fce-472d-b276-75490bfa05fe}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Resize.cpp">
+      <Filter>Misc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugPrint.cpp">
+      <Filter>Misc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="precomp.cpp">
+      <Filter>Misc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
+      <Filter>Misc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WallpaperManager.cpp">
+      <Filter>Misc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ThirdParty\ColorButton.cpp">
+      <Filter>Third Party Code</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrame.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="MF.Commands.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="MF.ListView.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="MF.Timer.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="MF.Toolbar.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="MF.TrayIcon.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsDlg.cpp">
+      <Filter>Dialog boxes</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayListManagerDlg.cpp">
+      <Filter>Dialog boxes</Filter>
+    </ClCompile>
+    <ClCompile Include="AboutDlg.cpp">
+      <Filter>Dialog boxes</Filter>
+    </ClCompile>
+    <ClCompile Include="AppBase.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="WallpaperChangerApp.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="MF.PlayList.cpp">
+      <Filter>Main Frame window</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayList.cpp">
+      <Filter>Misc Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\WTL\atlapp.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlcrack.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlctrls.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlctrlw.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlctrlx.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlddx.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atldlgs.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atldwm.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlfind.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlframe.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlgdi.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlmisc.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlprint.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlres.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlribbon.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlscrl.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlsplit.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atltheme.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atluser.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\WTL\atlwinx.h">
+      <Filter>WTL</Filter>
+    </ClInclude>
+    <ClInclude Include="Resize.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageListCache.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="precomp.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VersionInfo.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WallpaperManager.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DesktopWallpaper.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Registry.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayIcon.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HotKey.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ColorButton.h">
+      <Filter>Third Party Code</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayList.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ThirdParty\ToolBarHelper.h">
+      <Filter>Third Party Code</Filter>
+    </ClInclude>
+    <ClInclude Include="CountdownTimer.h">
+      <Filter>Misc Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrame.h">
+      <Filter>Main Frame window</Filter>
+    </ClInclude>
+    <ClInclude Include="AboutDlg.h">
+      <Filter>Dialog boxes</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsDlg.h">
+      <Filter>Dialog boxes</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayListManagerDlg.h">
+      <Filter>Dialog boxes</Filter>
+    </ClInclude>
+    <ClInclude Include="AppBase.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="WallpaperChangerApp.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayListNameDlg.h">
+      <Filter>Dialog boxes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WallpaperChanger.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\App.About.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\App.Options.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Playlist.Add.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Playlist.Current.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Playlist.Remove.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Playlist.Shuffle.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Next.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Pause.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Prev.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Random.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Safe.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\WallpaperChanger.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Safe.Alt.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Next.Alt.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+    <Image Include="res\Wallpaper.Prev.Alt.ico">
+      <Filter>Resource Files\Toolbar</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="WallpaperChanger.man">
+      <Filter>Resource Files</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\WTL\git-info.txt">
+      <Filter>WTL</Filter>
+    </Text>
+    <Text Include="..\LICENSE.txt">
+      <Filter>Documentation</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\README.md">
+      <Filter>Documentation</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Tools\Markdown\footer.html">
+      <Filter>Documentation\Markdown Tools</Filter>
+    </None>
+    <None Include="..\Tools\Markdown\header.html">
+      <Filter>Documentation\Markdown Tools</Filter>
+    </None>
+    <None Include="..\Tools\Markdown\MD-to-HTML.bat">
+      <Filter>Documentation\Markdown Tools</Filter>
+    </None>
+  </ItemGroup>
+</Project>
